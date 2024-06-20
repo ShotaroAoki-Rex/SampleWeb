@@ -18,10 +18,10 @@
   <script>
     window.onload = (event) => {
       console.log("page is fully loaded");
-      const element = document.querySelector(".btn.facebook");
-      console.log(element);
-      element.addEventListener("click", () => {
-        reproio("track", "facebook");
+      const btn = document.querySelector(".opcDeliveryMethod_completeButton_edit.opcCommonButtonEdit");
+      console.log(btn);
+      btn.addEventListener("click", () => {
+        reproio("track", "btnTap");
       });
     };
   </script>
@@ -53,6 +53,7 @@
         <p>or</p>
         <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
         <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
+        <input type="button" class="opcDeliveryMethod_completeButton_edit opcCommonButtonEdit" value="次へ">
       </div>
     </div>
   </div>
