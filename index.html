@@ -8,14 +8,14 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <script src="platform.js"></script>
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<!--   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-53GRMZ5');</script>
+  })(window,document,'script','dataLayer','GTM-53GRMZ5');</script> -->
   <!-- End Google Tag Manager -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
+<!--   <script>
     window.onload = (event) => {
       console.log("page is fully loaded");
       const btn = document.querySelector(".opcDeliveryMethod_completeButton_edit.opcCommonButtonEdit");
@@ -24,7 +24,20 @@
         reproio("track", "btnTap");
       });
     };
-  </script>
+  </script> -->
+<script>
+  
+  // console.log('hoge');
+  // document.cookie = "test:test";
+  // console.log(document.cookie);
+!function(o,e,n){var r=[];if(window.reproio)console.info("Repro Web SDK was loaded more than once");else{window.reproio=function(){r.push(arguments)};var i=o.createElement(e),t=o.getElementsByTagName(e)[0];i.src="https://cdn.reproio.com/web/v2/repro-sdk.min.js",i.async=!0,i.crossOrigin="",i.onload=function(){window.reproio("setSnippetVersion","2.1"),r.forEach(function(o){window.reproio.apply(window.reproio,o)})},t.parentNode.insertBefore(i,t)}}(document,"script");
+reproio("setUserID", "sumsung browser tester");
+reproio("setup", "8c0dbb2a-df85-4575-8fa1-d68627adb0fa", { allow_webview: true });
+reproio("track","PageView"); 
+  
+  
+  
+</script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
