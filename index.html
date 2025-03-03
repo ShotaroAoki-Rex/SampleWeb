@@ -20,6 +20,8 @@
     window.onload = (event) => {
       console.log("page is fully loaded");
       repro.track("appPageView");
+      repro.setUserGender(repro.userProfileGender.Male);
+      repro.setStringUserProfile("Job", "Developer");
       const btn = document.querySelector(".opcDeliveryMethod_completeButton_edit.opcCommonButtonEdit");
       console.log(btn);
       btn.addEventListener("click", () => {
