@@ -22,102 +22,103 @@
       const btn = document.querySelector(".opcDeliveryMethod_completeButton_edit.opcCommonButtonEdit");
       console.log(btn);
       btn.addEventListener("click", () => {
-      repro.setUserEmailAddress("user@exmaple.com");
-      var date = new Date("1991-07-31");
-      repro.setUserDateOfBirth(date.getTime());
-      repro.setUserAge(20);
-      repro.setStringUserProfile("Job", "Developer");
-      repro.setIntUserProfile("Age", 25);
-      repro.setDoubleUserProfile("Height", 176.5);
-      var now = new Date();
-      repro.setDateUserProfile("LastLogin", now.getTime());
-      repro.setUserResidencePrefecture(repro.userProfilePrefecture.TOKYO);
-      repro.setUserGender(repro.userProfileGender.Other);
+        reproio.("setUserID", "last_session_test");
+      // repro.setUserEmailAddress("user@exmaple.com");
+      // var date = new Date("1991-07-31");
+      // repro.setUserDateOfBirth(date.getTime());
+      // repro.setUserAge(20);
+      // repro.setStringUserProfile("Job", "Developer");
+      // repro.setIntUserProfile("Age", 25);
+      // repro.setDoubleUserProfile("Height", 176.5);
+      // var now = new Date();
+      // repro.setDateUserProfile("LastLogin", now.getTime());
+      // repro.setUserResidencePrefecture(repro.userProfilePrefecture.TOKYO);
+      // repro.setUserGender(repro.userProfileGender.Other);
 
-      repro.trackViewContent("1234", {
-        value: 5000.0,
-        currency: "JPY",
-        content_name: "Slim Jeans",
-        content_category: "Clothing & Shoes > Mens > Clothing"
-      });
+      // repro.trackViewContent("1234", {
+      //   value: 5000.0,
+      //   currency: "JPY",
+      //   content_name: "Slim Jeans",
+      //   content_category: "Clothing & Shoes > Mens > Clothing"
+      // });
 
-      repro.trackSearch({
-        value: 3000.0,
-        currency: "JPY",
-        content_category: "Clothing & Shoes > Mens > Clothing",
-        search_string: "Jeans",
-        content_id: "1234"
-      });
+      // repro.trackSearch({
+      //   value: 3000.0,
+      //   currency: "JPY",
+      //   content_category: "Clothing & Shoes > Mens > Clothing",
+      //   search_string: "Jeans",
+      //   content_id: "1234"
+      // });
 
-      repro.trackAddToCart("1234", {
-        value: 5000.0,
-        currency: "JPY",
-        content_name: "Slim Jeans",
-        content_category: "Clothing & Shoes > Mens > Clothing"
-      });
+      // repro.trackAddToCart("1234", {
+      //   value: 5000.0,
+      //   currency: "JPY",
+      //   content_name: "Slim Jeans",
+      //   content_category: "Clothing & Shoes > Mens > Clothing"
+      // });
 
-      repro.trackAddToWishlist({
-        value: 5000.0,
-        currency: "JPY",
-        content_name: "Slim Jeans",
-        content_category: "Clothing & Shoes > Mens > Clothing",
-        content_id: "1234"
-      });
+      // repro.trackAddToWishlist({
+      //   value: 5000.0,
+      //   currency: "JPY",
+      //   content_name: "Slim Jeans",
+      //   content_category: "Clothing & Shoes > Mens > Clothing",
+      //   content_id: "1234"
+      // });
 
-      repro.trackInitiateCheckout({
-        value: 8000.0,
-        currency: "JPY",
-        content_name: "Slim Jeans",
-        content_category: "Clothing & Shoes > Mens > Clothing",
-        content_id: "1234"
-      });
+      // repro.trackInitiateCheckout({
+      //   value: 8000.0,
+      //   currency: "JPY",
+      //   content_name: "Slim Jeans",
+      //   content_category: "Clothing & Shoes > Mens > Clothing",
+      //   content_id: "1234"
+      // });
 
-      repro.trackAddPaymentInfo({
-        value: 8000.0,
-        currency: "JPY",
-        content_category: "Clothing & Shoes > Mens > Clothing",
-        content_id: "1234"
-      });
+      // repro.trackAddPaymentInfo({
+      //   value: 8000.0,
+      //   currency: "JPY",
+      //   content_category: "Clothing & Shoes > Mens > Clothing",
+      //   content_id: "1234"
+      // });
 
-      repro.trackPurchase("1234", 8000.0, "JPY", {
-        content_name: "Slim Jeans",
-        content_category: "Clothing & Shoes > Mens > Clothing",
-        num_items: 2
-      });
+      // repro.trackPurchase("1234", 8000.0, "JPY", {
+      //   content_name: "Slim Jeans",
+      //   content_category: "Clothing & Shoes > Mens > Clothing",
+      //   num_items: 2
+      // });
 
-      repro.trackShare({
-        content_category: "Clothing & Shoes > Mens > Clothing",
-        content_name: "Slim Jeans",
-        content_id: "1234",
-        service_name: "twitter"
-      });
+      // repro.trackShare({
+      //   content_category: "Clothing & Shoes > Mens > Clothing",
+      //   content_name: "Slim Jeans",
+      //   content_id: "1234",
+      //   service_name: "twitter"
+      // });
 
-      repro.trackLead({
-        value: 8000.0,
-        currency: "JPY",
-        content_name: "Slim Jeans",
-        content_category: "Clothing & Shoes > Mens > Clothing"
-      });
+      // repro.trackLead({
+      //   value: 8000.0,
+      //   currency: "JPY",
+      //   content_name: "Slim Jeans",
+      //   content_category: "Clothing & Shoes > Mens > Clothing"
+      // });
 
-      repro.trackCompleteRegistration({
-        value: 8000.0,
-        currency: "JPY",
-        content_name: "Slim Jeans",
-        status: "completed"
-      });
+      // repro.trackCompleteRegistration({
+      //   value: 8000.0,
+      //   currency: "JPY",
+      //   content_name: "Slim Jeans",
+      //   status: "completed"
+      // });
 
-      repro.trackViewContent("1234", {
-        value: 5000.0,
-        currency: "JPY",
-        content_name: "Slim Jeans",
-        content_category: "Clothing & Shoes > Mens > Clothing",
-        extras: {
-          color: "blue",
-          waist: 90
-        }
-      });
+      // repro.trackViewContent("1234", {
+      //   value: 5000.0,
+      //   currency: "JPY",
+      //   content_name: "Slim Jeans",
+      //   content_category: "Clothing & Shoes > Mens > Clothing",
+      //   extras: {
+      //     color: "blue",
+      //     waist: 90
+      //   }
+      // });
 
-      repro.track("user review", { rating: 3 });
+      // repro.track("user review", { rating: 3 });
       });
     };
   </script>
