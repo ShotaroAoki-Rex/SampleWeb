@@ -17,11 +17,13 @@
   <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
   <!-- <script src="//cdn.reproio.com/js/v6/repro.js" type="text/javascript" charset="utf-8"></script> -->
   <script>
+    function reproio_execution(b,c,a){if(a&&-1!==a)return reproio(b,c,a)}
+  </script>
+  <script>
     window.onload = (event) => {
       console.log("page is fully loaded");
       const btn = document.querySelector(".opcDeliveryMethod_completeButton_edit.opcCommonButtonEdit");
       console.log(btn);
-      function reproio_execution(b,c,a){if(a&&-1!==a)return reproio(b,c,a)}
 
       btn.addEventListener("click", () => {
         console.log("click");
