@@ -27,8 +27,10 @@
 
       btn.addEventListener("click", () => {
         console.log("click");
+        reproio("track", "beforeSetUp");
         reproio("setUserID", "last_session_test");
         reproio("setup","8c0dbb2a-df85-4575-8fa1-d68627adb0fa",{allow_webview:!0});
+        reproio("track", "afterSetUp");
         // reproio("track", "clicked");
       // repro.setUserEmailAddress("user@exmaple.com");
       // var date = new Date("1991-07-31");
