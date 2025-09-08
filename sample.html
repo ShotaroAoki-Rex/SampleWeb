@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Iframe Video Autoplay Sample</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    iframe {
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Iframeで自動再生される動画サンプル</h1>
+
+  <!-- iframe読み込み -->
+  <iframe 
+    srcdoc='
+      <video 
+        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" 
+        autoplay 
+        muted 
+        loop 
+        playsinline 
+        width="320">
+      </video>
+    ' 
+    width="340" 
+    height="200" 
+    frameborder="0" 
+    allow="autoplay">
+  </iframe>
+
+  <p>※ 音声はミュートされています。再生・停止は動画上で操作可能です。</p>
+</body>
+</html>
