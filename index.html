@@ -1,6 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script>
+//  console.log('hoge');
+//  document.cookie = "test:test";
+//  console.log(document.cookie);
+(function waitForReproio() {
+  if (typeof window.reproio === 'function') {
+    var orig = window.reproio;
+
+    window.reproio = function () {
+      console.log(
+        'reproio called at',
+        performance.now(),
+        arguments
+      );
+      return orig.apply(this, arguments);
+    };
+    console.log(
+        'reproio hook installed',
+        performance.now()
+      );
+  } else {
+    setTimeout(waitForReproio, 50);
+  }
+})();
+!function(o,e,n){var r=[];if(window.reproio)console.info("Repro Web SDK was loaded more than once");else{window.reproio=function(){r.push(arguments)};var i=o.createElement(e),t=o.getElementsByTagName(e)[0];i.src="https://cdn.reproio.com/web/v2/repro-sdk.min.js",i.async=!0,i.crossOrigin="",i.onload=function(){window.reproio("setSnippetVersion","2.1"),r.forEach(function(o){window.reproio.apply(window.reproio,o)})},t.parentNode.insertBefore(i,t)}}(document,"script");
+ // reproio("setStringUserProfile", "timing", "beforSetUp");
+// reproio("setUserID", "tester")
+reproio("setup", "8c0dbb2a-df85-4575-8fa1-d68627adb0fa", { allow_webview: true });
+reproio("track","PageView"); 
+repro.isInAppBrowser = true;
+  // repro.track("webview_test", { rating: 3, string: "hoge", int: 4, double: 5.5 });
+
+// 例: 履歴管理用に自分で履歴を保存
+// var historyList = JSON.parse(localStorage.getItem("customHistory")) || [];
+// historyList.push(window.location.href);
+// localStorage.setItem("customHistory", JSON.stringify(historyList));
+
+// 履歴の全件を取得
+// var allHistory = JSON.parse(localStorage.getItem("customHistory"));
+// console.log(allHistory);
+  
+  
+</script>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
