@@ -15,6 +15,8 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#ffffff">
+  <!-- context7の検証用 -->
+  <script src="https://context7.com/widget.js" data-library="/llmstxt/repro_io_ja_llms-full_txt"></script>
   <script src="platform.js"></script>
   <script>
    !function(o,e,n){var r=[];if(window.reproio)console.info("Repro Web SDK was loaded more than once");else{window.reproio=function(){r.push(arguments)};var i=o.createElement(e),t=o.getElementsByTagName(e)[0];i.src="https://cdn.reproio.com/web/v2/repro-sdk.min.js",i.async=!0,i.crossOrigin="",i.onload=function(){window.reproio("setSnippetVersion","2.1"),r.forEach(function(o){window.reproio.apply(window.reproio,o)})},t.parentNode.insertBefore(i,t)}}(document,"script");
