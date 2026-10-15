@@ -24,6 +24,23 @@
   </script>
   <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="//cdn.reproio.com/js/v7/repro.js" type="text/javascript" charset="utf-8"></script> -->
+  <script
+// 'btn' と 'twitter' の両方のクラスを持つ要素をすべて取得
+const buttons = document.querySelectorAll('.btn.twitter');
+
+buttons.forEach(function(button) {
+  button.addEventListener('click', function(e) {
+    e.preventDefault(); // aタグなどのデフォルトの画面遷移をキャンセル
+
+    // 呼び出したいカスタムURLスキームを設定
+    // 例: Twitter(X)の特定のユーザーページを開く場合
+    const customScheme = 'cm-app://test; 
+    
+    // カスタムURLスキームを実行してアプリを起動
+    window.location.href = customScheme;
+  });
+});
+</script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript)
@@ -364,25 +381,5 @@
   data-position="bottom-right"
   data-placeholder="Reproの使い方を質問してください（placefolderは変更可能です）"
 ></script>
-<script
-// DOMの読み込みが完了した後に実行する
-document.addEventListener('DOMContentLoaded', function() {
-  // 'btn' と 'twitter' の両方のクラスを持つ要素をすべて取得
-  const buttons = document.querySelectorAll('.btn.twitter');
-
-  buttons.forEach(function(button) {
-    button.addEventListener('click', function(e) {
-      e.preventDefault(); // aタグなどのデフォルトの画面遷移をキャンセル
-
-      // 呼び出したいカスタムURLスキームを設定
-      // 例: Twitter(X)の特定のユーザーページを開く場合
-      const customScheme = 'cm-app://test; 
-      
-      // カスタムURLスキームを実行してアプリを起動
-      window.location.href = customScheme;
-    });
-  });
-});
-</script>
 </body>
 </html>
