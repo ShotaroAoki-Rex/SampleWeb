@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アプリを起動中...</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #007AFF;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>アプリを起動しています...</h2>
+  <p>自動的に切り替わらない場合は、下のボタンを押してください。</p>
+
+  <!-- 自動起動がブラウザのセキュリティでブロックされた場合のフォールバックボタン -->
+  <button id="openAppBtn" class="btn">アプリを開く</button>
+
+  <script>
+    // 起動したいURLスキーム（パラメータ等があればここに追加）
+    const customScheme = "testapp://";
+
+    // アプリ未インストール時に誘導するURL（App Store / Google Play / Webサイトなど）
+    const fallbackUrl = "https://apps.apple.com/app/idXXX"; 
+
+    // アプリ起動を試みる関数
+    function openApp() {
+      const startTime = Date.now();
+      window.location.href = customScheme;
+
+      // 1.5秒後に画面が遷移していなければ、アプリ未インストールと判定してストア等へ誘導
+      setTimeout(function() {
+        if (Date.now() - startTime < 2000) {
+          window.location.href = fallbackUrl;
+        }
+      }, 1500);
+    }
+
+    // 1. ページ読み込み完了時に自動実行
+    window.addEventListener("DOMContentLoaded", function() {
+      openApp();
+    });
+
+    // 2. ボタンタップ時の手動実行（OSのセキュリティブロック回避用）
+    document.getElementById("openAppBtn").addEventListener("click", function() {
+      openApp();
+    });
+  </script>
+</body>
+</html>
